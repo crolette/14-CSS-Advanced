@@ -1,0 +1,52 @@
+@use './reset';
+
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+
+	div {
+		width: 100%;
+		height: 100px;
+
+		&.divider-1 {
+			background-color: red;
+		}
+
+		&.divider-2 {
+			background-color: blue;
+		}
+
+		&.divider-3 {
+			background-color: yellow;
+		}
+
+		&.divider-4 {
+			background-color: green;
+		}
+
+		&.divider-5 {
+			background-color: orange;
+		}
+
+		&.divider-6 {
+			background-color: magenta;
+		}
+	}
+}
+
+@media (426px <= width <= 768px) {
+	.container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (width <= 425px) {
+	.container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
