@@ -1,0 +1,53 @@
+@use 'reset.css';
+
+body {
+	background: #000;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@mixin button-animation {
+	padding: 16px;
+	color: white;
+	background: transparent;
+	font-weight: bold;
+	border: 2px solid white;
+}
+
+.one {
+	@include button-animation;
+	transition: background 2s;
+
+	&:hover {
+		background: #fff;
+		color: black;
+	}
+}
+
+.two {
+	@include button-animation;
+	transition: transform 1s;
+
+	&:hover {
+		transform: scale(1.2);
+		background: #fff;
+		color: black;
+	}
+}
+
+.three {
+	@include button-animation;
+	transition: transform 1s;
+
+	&:hover {
+		transform: translateX(120px);
+		background: #fff;
+		color: black;
+	}
+}
