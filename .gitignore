@@ -15,3 +15,5 @@ node_modules/
 #Avoid environment files to be uploaded
 .env
 .env.*
+.css.map
+
